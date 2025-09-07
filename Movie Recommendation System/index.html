@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 md:p-8 bg-slate-50 min-h-screen flex flex-col items-center">
+    <div class="max-w-4xl w-full mx-auto space-y-8">
+
+        <!-- Header -->
+        <header class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Movie Recommender</h1>
+            <p class="text-gray-600 text-lg">Find your next favorite movie by genre.</p>
+        </header>
+
+        <!-- Genre Filters -->
+        <div class="flex flex-wrap justify-center gap-2 md:gap-4 p-4 bg-white rounded-2xl shadow-lg">
+            <button onclick="filterMovies('All')" class="px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200 bg-slate-200 text-slate-800 hover:bg-slate-300">All</button>
+            <button onclick="filterMovies('Action')" class="px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200 bg-slate-200 text-slate-800 hover:bg-slate-300">Action</button>
+            <button onclick="filterMovies('Sci-Fi')" class="px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200 bg-slate-200 text-slate-800 hover:bg-slate-300">Sci-Fi</button>
+            <button onclick="filterMovies('Comedy')" class="px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200 bg-slate-200 text-slate-800 hover:bg-slate-300">Comedy</button>
+            <button onclick="filterMovies('Drama')" class="px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200 bg-slate-200 text-slate-800 hover:bg-slate-300">Drama</button>
+            <button onclick="surpriseMe()" class="px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200 bg-sky-500 text-white hover:bg-sky-600">Surprise Me</button>
+        </div>
+
+        <!-- Movie List Container -->
+        <div id="movie-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Movie cards will be dynamically inserted here -->
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
